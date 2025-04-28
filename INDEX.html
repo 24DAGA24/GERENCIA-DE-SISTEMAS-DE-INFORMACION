@@ -2,31 +2,66 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administración en la Nube</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f3f3f3;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fafb;
+            color: #333;
+            line-height: 1.6;
         }
         header {
-            background-color: #4CAF50;
+            background: linear-gradient(90deg, #4CAF50, #45a049);
             color: white;
-            padding: 1em 2em;
+            padding: 2em 1em;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            font-size: 2.5em;
+        }
+        main {
+            max-width: 1000px;
+            margin: 2em auto;
+            padding: 0 1em;
         }
         section {
+            margin-bottom: 2em;
+            background: white;
             padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        h2 {
-            color: #333;
+        section h2 {
+            margin-bottom: 1em;
+            color: #4CAF50;
+            font-size: 1.8em;
+        }
+        ul {
+            list-style: inside square;
+            padding-left: 1em;
         }
         footer {
             background-color: #222;
-            color: white;
+            color: #bbb;
             text-align: center;
-            padding: 1em;
+            padding: 1.5em 1em;
+            margin-top: 2em;
+            font-size: 0.9em;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            section h2 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
@@ -36,35 +71,37 @@
     <h1>Administración en la Nube</h1>
 </header>
 
-<section>
-    <h2>¿Qué es la administración en la nube?</h2>
-    <p>La administración en la nube se refiere al control y monitoreo de recursos tecnológicos, como servidores, bases de datos y aplicaciones, que están alojados en plataformas en línea como AWS, Google Cloud o Microsoft Azure.</p>
-</section>
+<main>
+    <section>
+        <h2>¿Qué es la administración en la nube?</h2>
+        <p>La administración en la nube implica controlar y monitorear recursos tecnológicos —como servidores, bases de datos y aplicaciones— alojados en plataformas como AWS, Google Cloud o Microsoft Azure.</p>
+    </section>
 
-<section>
-    <h2>Funciones principales</h2>
-    <ul>
-        <li>Gestión de recursos y almacenamiento</li>
-        <li>Monitoreo del rendimiento</li>
-        <li>Automatización de tareas</li>
-        <li>Escalabilidad y disponibilidad</li>
-        <li>Seguridad y acceso controlado</li>
-    </ul>
-</section>
+    <section>
+        <h2>Funciones principales</h2>
+        <ul>
+            <li>Gestión de recursos y almacenamiento</li>
+            <li>Monitoreo del rendimiento</li>
+            <li>Automatización de tareas</li>
+            <li>Escalabilidad y alta disponibilidad</li>
+            <li>Seguridad y acceso controlado</li>
+        </ul>
+    </section>
 
-<section>
-    <h2>Tecnologías utilizadas</h2>
-    <p>Entre las tecnologías más utilizadas en la administración en la nube se incluyen:</p>
-    <ul>
-        <li>Plataformas como AWS, Azure y Google Cloud</li>
-        <li>Herramientas de automatización como Ansible, Terraform o Kubernetes</li>
-        <li>Monitoreo con herramientas como Prometheus o Datadog</li>
-        <li>Sistemas operativos Linux/Unix</li>
-    </ul>
-</section>
+    <section>
+        <h2>Tecnologías utilizadas</h2>
+        <p>Las principales tecnologías para la administración en la nube incluyen:</p>
+        <ul>
+            <li>Plataformas: AWS, Azure, Google Cloud</li>
+            <li>Automatización: Ansible, Terraform, Kubernetes</li>
+            <li>Monitoreo: Prometheus, Datadog</li>
+            <li>Sistemas operativos: Linux/Unix</li>
+        </ul>
+    </section>
+</main>
 
 <footer>
-    <p>© 2025 Tecnología en la Nube - Todos los derechos reservados</p>
+    <p>© 2025 Tecnología en la Nube - Todos los derechos reservados.</p>
 </footer>
 
 </body>
