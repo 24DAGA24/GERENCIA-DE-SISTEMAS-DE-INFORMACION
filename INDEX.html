@@ -12,55 +12,80 @@
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9fafb;
+            background-color: #f0f4f8;
             color: #333;
             line-height: 1.6;
         }
         header {
-            background: linear-gradient(90deg, #4CAF50, #45a049);
+            background: linear-gradient(90deg, #38b6ff, #0077ff);
             color: white;
-            padding: 2em 1em;
+            padding: 2.5em 1em;
             text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
         header h1 {
-            font-size: 2.5em;
+            font-size: 3em;
         }
         main {
-            max-width: 1000px;
-            margin: 2em auto;
-            padding: 0 1em;
+            max-width: 1100px;
+            margin: 3em auto;
+            padding: 0 1.5em;
         }
         section {
-            margin-bottom: 2em;
+            margin-bottom: 2.5em;
             background: white;
-            padding: 2em;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 2.5em;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
         section h2 {
             margin-bottom: 1em;
-            color: #4CAF50;
-            font-size: 1.8em;
+            color: #0077ff;
+            font-size: 2em;
+        }
+        p, ul {
+            font-size: 1.1em;
         }
         ul {
             list-style: inside square;
             padding-left: 1em;
+            margin-top: 1em;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 1.5em;
+            padding: 0.8em 1.5em;
+            background-color: #0077ff;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1em;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .btn:hover {
+            background-color: #005bb5;
+            transform: scale(1.05);
         }
         footer {
             background-color: #222;
             color: #bbb;
             text-align: center;
-            padding: 1.5em 1em;
-            margin-top: 2em;
+            padding: 2em 1em;
+            margin-top: 4em;
             font-size: 0.9em;
         }
         @media (max-width: 600px) {
             header h1 {
-                font-size: 2em;
+                font-size: 2.2em;
             }
             section h2 {
-                font-size: 1.5em;
+                font-size: 1.6em;
             }
         }
     </style>
@@ -75,6 +100,7 @@
     <section>
         <h2>¿Qué es la administración en la nube?</h2>
         <p>La administración en la nube implica controlar y monitorear recursos tecnológicos —como servidores, bases de datos y aplicaciones— alojados en plataformas como AWS, Google Cloud o Microsoft Azure.</p>
+        <a href="#" class="btn">Conocer más</a>
     </section>
 
     <section>
@@ -86,6 +112,7 @@
             <li>Escalabilidad y alta disponibilidad</li>
             <li>Seguridad y acceso controlado</li>
         </ul>
+        <a href="#" class="btn">Ver funciones</a>
     </section>
 
     <section>
@@ -97,6 +124,7 @@
             <li>Monitoreo: Prometheus, Datadog</li>
             <li>Sistemas operativos: Linux/Unix</li>
         </ul>
+        <a href="#" class="btn">Explorar tecnologías</a>
     </section>
 </main>
 
