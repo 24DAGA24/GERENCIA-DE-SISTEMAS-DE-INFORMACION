@@ -3,161 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administración en la Nube</title>
+    <title>Administración en la Nube - UPLA</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #eef2f7;
-            color: #333;
-            line-height: 1.6;
-        }
-        nav {
-            background-color: #0077ff;
-            padding: 1em;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            margin: 0 1em;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ffdd57;
-        }
-        header {
-            background: linear-gradient(90deg, #38b6ff, #0077ff);
-            color: white;
-            padding: 3em 1em;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 0.5em;
-        }
-        main {
-            max-width: 1100px;
-            margin: 3em auto;
-            padding: 0 1.5em;
-        }
-        section {
-            margin-bottom: 2.5em;
-            background: white;
-            padding: 2.5em;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-        section h2 {
-            margin-bottom: 1em;
-            color: #0077ff;
-            font-size: 2em;
-        }
-        p, ul {
-            font-size: 1.1em;
-        }
-        ul {
-            list-style: inside square;
-            padding-left: 1em;
-            margin-top: 1em;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 1.5em;
-            padding: 0.8em 1.5em;
-            background-color: #0077ff;
-            color: white;
-            border: none;
-            border-radius: 25px;
-            text-decoration: none;
-            font-size: 1em;
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
-        .btn:hover {
-            background-color: #005bb5;
-            transform: scale(1.05);
-        }
-        footer {
-            background-color: #222;
-            color: #bbb;
-            text-align: center;
-            padding: 2em 1em;
-            margin-top: 4em;
-            font-size: 0.9em;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #eef2f7; color: #333; }
+        nav { background-color: #0077ff; padding: 1em; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; margin: 0 1em; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+        nav a:hover { color: #ffdd57; }
+        header { background: white; padding: 2em 1em; text-align: center; }
+        header img { width: 120px; }
+        header h1 { margin-top: 1em; font-size: 2em; color: #0077ff; }
+        main { max-width: 1100px; margin: 3em auto; padding: 0 1.5em; }
+        .unidad { background: white; margin-bottom: 2em; padding: 2em; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
+        .unidad h2 { margin-bottom: 1em; color: #0077ff; }
+        .botonera { display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin-top: 1em; }
+        .btn { display: inline-block; padding: 0.8em 1.5em; background-color: #0077ff; color: white; border: none; border-radius: 25px; text-decoration: none; font-size: 1em; transition: background 0.3s ease, transform 0.2s ease; }
+        .btn:hover { background-color: #005bb5; transform: scale(1.05); }
+        section { margin-top: 4em; background: white; padding: 2.5em; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        section h2 { margin-bottom: 1em; color: #0077ff; }
+        p, ul { font-size: 1.1em; }
+        ul { list-style: inside square; padding-left: 1em; margin-top: 1em; }
+        footer { background-color: #222; color: #bbb; text-align: center; padding: 2em 1em; margin-top: 4em; font-size: 0.9em; }
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 2.2em;
-            }
-            section h2 {
-                font-size: 1.6em;
-            }
+            .botonera { flex-direction: column; }
+            header h1 { font-size: 1.6em; }
         }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="#que-es">Qué es</a>
-    <a href="#funciones">Funciones</a>
-    <a href="#tecnologias">Tecnologías</a>
+    <a href="#inicio">Inicio</a>
+    <a href="#unidad2">Unidad 2</a>
 </nav>
 
-<header>
-    <h1>Administración en la Nube</h1>
-    <p>Moderniza tu infraestructura y optimiza tus procesos.</p>
+<header id="inicio">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Logo_Upla.png" alt="Logo UPLA">
+    <h1>Universidad Peruana Los Andes - Administración en la Nube</h1>
 </header>
 
 <main>
-    <section id="que-es">
-        <h2>¿Qué es la administración en la nube?</h2>
+    <div class="unidad">
+        <h2>Unidad 1</h2>
+        <div class="botonera">
+            <a href="#" class="btn">Semana 1</a>
+            <a href="#" class="btn">Semana 2</a>
+            <a href="#" class="btn">Semana 3</a>
+            <a href="#" class="btn">Semana 4</a>
+        </div>
+    </div>
+
+    <div class="unidad" id="unidad2">
+        <h2>Unidad 2</h2>
+        <div class="botonera">
+            <a href="#" class="btn">Semana 1</a>
+            <a href="#semana2" class="btn">Semana 2</a>
+            <a href="#" class="btn">Semana 3</a>
+            <a href="#" class="btn">Semana 4</a>
+        </div>
+    </div>
+
+    <div class="unidad">
+        <h2>Unidad 3</h2>
+        <div class="botonera">
+            <a href="#" class="btn">Semana 1</a>
+            <a href="#" class="btn">Semana 2</a>
+            <a href="#" class="btn">Semana 3</a>
+            <a href="#" class="btn">Semana 4</a>
+        </div>
+    </div>
+
+    <div class="unidad">
+        <h2>Unidad 4</h2>
+        <div class="botonera">
+            <a href="#" class="btn">Semana 1</a>
+            <a href="#" class="btn">Semana 2</a>
+            <a href="#" class="btn">Semana 3</a>
+            <a href="#" class="btn">Semana 4</a>
+        </div>
+    </div>
+
+    <!-- Contenido de Unidad 2, Semana 2 -->
+    <section id="semana2">
+        <h2>Administración en la Nube (Unidad 2 - Semana 2)</h2>
         <p>La administración en la nube implica controlar, supervisar y optimizar los recursos tecnológicos hospedados en plataformas de nube pública, privada o híbrida. Este tipo de administración asegura que los servicios estén disponibles, sean escalables, seguros y eficientes.</p>
-        <p>Incluye la gestión de entornos complejos, configuraciones automáticas, respaldo de datos, y aplicación de actualizaciones y parches de seguridad.</p>
-        <a href="#" class="btn">Conocer más</a>
+        <ul>
+            <li>Gestión de recursos y almacenamiento</li>
+            <li>Monitoreo del rendimiento</li>
+            <li>Automatización de tareas</li>
+            <li>Escalabilidad y alta disponibilidad</li>
+            <li>Seguridad y acceso controlado</li>
+        </ul>
+        <p>Las principales tecnologías utilizadas incluyen AWS, Azure, GCP, Ansible, Terraform, Kubernetes, Prometheus y Datadog.</p>
     </section>
 
-    <section id="funciones">
-        <h2>Funciones principales</h2>
-        <ul>
-            <li><strong>Gestión de recursos y almacenamiento:</strong> Optimizar el uso de almacenamiento, redes y servidores para reducir costos y aumentar la eficiencia.</li>
-            <li><strong>Monitoreo del rendimiento:</strong> Supervisar el estado de los servicios y aplicaciones para anticipar fallos y mejorar tiempos de respuesta.</li>
-            <li><strong>Automatización de tareas:</strong> Implementar scripts y herramientas para la automatización de despliegues, copias de seguridad y actualizaciones.</li>
-            <li><strong>Escalabilidad y alta disponibilidad:</strong> Garantizar que los sistemas crezcan según la demanda sin perder rendimiento o disponibilidad.</li>
-            <li><strong>Seguridad y acceso controlado:</strong> Aplicar políticas de seguridad, firewalls, cifrado y gestión de identidades para proteger los datos.</li>
-        </ul>
-        <a href="#" class="btn">Ver funciones</a>
-    </section>
-
-    <section id="tecnologias">
-        <h2>Tecnologías utilizadas</h2>
-        <p>Para la correcta administración en la nube se utilizan diversas herramientas que permiten automatizar, monitorear y gestionar de forma eficaz los recursos:</p>
-        <ul>
-            <li><strong>Plataformas:</strong> AWS, Microsoft Azure, Google Cloud Platform (GCP).</li>
-            <li><strong>Automatización:</strong> Ansible (configuración), Terraform (infraestructura como código), Kubernetes (orquestación de contenedores).</li>
-            <li><strong>Monitoreo:</strong> Prometheus (recolección de métricas), Datadog (análisis de datos y alertas).</li>
-            <li><strong>Sistemas Operativos:</strong> Linux/Unix como entornos predominantes en servidores cloud.</li>
-            <li><strong>Seguridad:</strong> Vault, IAM (Identity and Access Management), firewalls administrados.</li>
-        </ul>
-        <a href="#" class="btn">Explorar tecnologías</a>
-    </section>
 </main>
 
 <footer>
-    <p>© 2025 Tecnología en la Nube - Todos los derechos reservados.</p>
+    <p>© 2025 Universidad Peruana Los Andes - Todos los derechos reservados.</p>
 </footer>
 
 </body>
