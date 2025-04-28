@@ -12,19 +12,38 @@
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f4f8;
+            background-color: #eef2f7;
             color: #333;
             line-height: 1.6;
+        }
+        nav {
+            background-color: #0077ff;
+            padding: 1em;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            margin: 0 1em;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffdd57;
         }
         header {
             background: linear-gradient(90deg, #38b6ff, #0077ff);
             color: white;
-            padding: 2.5em 1em;
+            padding: 3em 1em;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
         header h1 {
             font-size: 3em;
+            margin-bottom: 0.5em;
         }
         main {
             max-width: 1100px;
@@ -92,37 +111,46 @@
 </head>
 <body>
 
+<nav>
+    <a href="#que-es">Qué es</a>
+    <a href="#funciones">Funciones</a>
+    <a href="#tecnologias">Tecnologías</a>
+</nav>
+
 <header>
     <h1>Administración en la Nube</h1>
+    <p>Moderniza tu infraestructura y optimiza tus procesos.</p>
 </header>
 
 <main>
-    <section>
+    <section id="que-es">
         <h2>¿Qué es la administración en la nube?</h2>
-        <p>La administración en la nube implica controlar y monitorear recursos tecnológicos —como servidores, bases de datos y aplicaciones— alojados en plataformas como AWS, Google Cloud o Microsoft Azure.</p>
+        <p>La administración en la nube implica controlar, supervisar y optimizar los recursos tecnológicos hospedados en plataformas de nube pública, privada o híbrida. Este tipo de administración asegura que los servicios estén disponibles, sean escalables, seguros y eficientes.</p>
+        <p>Incluye la gestión de entornos complejos, configuraciones automáticas, respaldo de datos, y aplicación de actualizaciones y parches de seguridad.</p>
         <a href="#" class="btn">Conocer más</a>
     </section>
 
-    <section>
+    <section id="funciones">
         <h2>Funciones principales</h2>
         <ul>
-            <li>Gestión de recursos y almacenamiento</li>
-            <li>Monitoreo del rendimiento</li>
-            <li>Automatización de tareas</li>
-            <li>Escalabilidad y alta disponibilidad</li>
-            <li>Seguridad y acceso controlado</li>
+            <li><strong>Gestión de recursos y almacenamiento:</strong> Optimizar el uso de almacenamiento, redes y servidores para reducir costos y aumentar la eficiencia.</li>
+            <li><strong>Monitoreo del rendimiento:</strong> Supervisar el estado de los servicios y aplicaciones para anticipar fallos y mejorar tiempos de respuesta.</li>
+            <li><strong>Automatización de tareas:</strong> Implementar scripts y herramientas para la automatización de despliegues, copias de seguridad y actualizaciones.</li>
+            <li><strong>Escalabilidad y alta disponibilidad:</strong> Garantizar que los sistemas crezcan según la demanda sin perder rendimiento o disponibilidad.</li>
+            <li><strong>Seguridad y acceso controlado:</strong> Aplicar políticas de seguridad, firewalls, cifrado y gestión de identidades para proteger los datos.</li>
         </ul>
         <a href="#" class="btn">Ver funciones</a>
     </section>
 
-    <section>
+    <section id="tecnologias">
         <h2>Tecnologías utilizadas</h2>
-        <p>Las principales tecnologías para la administración en la nube incluyen:</p>
+        <p>Para la correcta administración en la nube se utilizan diversas herramientas que permiten automatizar, monitorear y gestionar de forma eficaz los recursos:</p>
         <ul>
-            <li>Plataformas: AWS, Azure, Google Cloud</li>
-            <li>Automatización: Ansible, Terraform, Kubernetes</li>
-            <li>Monitoreo: Prometheus, Datadog</li>
-            <li>Sistemas operativos: Linux/Unix</li>
+            <li><strong>Plataformas:</strong> AWS, Microsoft Azure, Google Cloud Platform (GCP).</li>
+            <li><strong>Automatización:</strong> Ansible (configuración), Terraform (infraestructura como código), Kubernetes (orquestación de contenedores).</li>
+            <li><strong>Monitoreo:</strong> Prometheus (recolección de métricas), Datadog (análisis de datos y alertas).</li>
+            <li><strong>Sistemas Operativos:</strong> Linux/Unix como entornos predominantes en servidores cloud.</li>
+            <li><strong>Seguridad:</strong> Vault, IAM (Identity and Access Management), firewalls administrados.</li>
         </ul>
         <a href="#" class="btn">Explorar tecnologías</a>
     </section>
