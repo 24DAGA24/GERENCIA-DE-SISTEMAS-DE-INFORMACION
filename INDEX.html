@@ -8,7 +8,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #eef2f7; color: #333; }
         nav { background-color: #0077ff; padding: 1em; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; margin: 0 1em; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+        nav a { color: white; margin: 0 1em; text-decoration: none; font-weight: bold; transition: color 0.3s; cursor: pointer; }
         nav a:hover { color: #ffdd57; }
         header { background: white; padding: 2em 1em; text-align: center; }
         header img { width: 120px; }
@@ -17,9 +17,9 @@
         .unidad { background: white; margin-bottom: 2em; padding: 2em; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
         .unidad h2 { margin-bottom: 1em; color: #0077ff; }
         .botonera { display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin-top: 1em; }
-        .btn { display: inline-block; padding: 0.8em 1.5em; background-color: #0077ff; color: white; border: none; border-radius: 25px; text-decoration: none; font-size: 1em; transition: background 0.3s ease, transform 0.2s ease; }
+        .btn { display: inline-block; padding: 0.8em 1.5em; background-color: #0077ff; color: white; border: none; border-radius: 25px; text-decoration: none; font-size: 1em; transition: background 0.3s ease, transform 0.2s ease; cursor: pointer; }
         .btn:hover { background-color: #005bb5; transform: scale(1.05); }
-        section { margin-top: 4em; background: white; padding: 2.5em; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        section { margin-top: 4em; background: white; padding: 2.5em; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: none; }
         section h2 { margin-bottom: 1em; color: #0077ff; }
         p, ul { font-size: 1.1em; }
         ul { list-style: inside square; padding-left: 1em; margin-top: 1em; }
@@ -33,75 +33,97 @@
 <body>
 
 <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#unidad2">Unidad 2</a>
+    <a onclick="showUnidad(1)">Unidad 1</a>
+    <a onclick="showUnidad(2)">Unidad 2</a>
+    <a onclick="showUnidad(3)">Unidad 3</a>
+    <a onclick="showUnidad(4)">Unidad 4</a>
 </nav>
 
 <header id="inicio">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Logo_Upla.png" alt="Logo UPLA">
+    <img src="UPLA.jpg" alt="Logo UPLA">
     <h1>Universidad Peruana Los Andes - Administración en la Nube</h1>
 </header>
 
 <main>
-    <div class="unidad">
+    <!-- Unidades -->
+    <div class="unidad" id="unidad1">
         <h2>Unidad 1</h2>
         <div class="botonera">
-            <a href="#" class="btn">Semana 1</a>
-            <a href="#" class="btn">Semana 2</a>
-            <a href="#" class="btn">Semana 3</a>
-            <a href="#" class="btn">Semana 4</a>
+            <a onclick="showSemana(1)" class="btn">Semana 1</a>
+            <a onclick="showSemana(2)" class="btn">Semana 2</a>
+            <a onclick="showSemana(3)" class="btn">Semana 3</a>
+            <a onclick="showSemana(4)" class="btn">Semana 4</a>
         </div>
     </div>
 
-    <div class="unidad" id="unidad2">
-        <h2>Unidad 2</h2>
-        <div class="botonera">
-            <a href="#" class="btn">Semana 1</a>
-            <a href="#semana2" class="btn">Semana 2</a>
-            <a href="#" class="btn">Semana 3</a>
-            <a href="#" class="btn">Semana 4</a>
-        </div>
-    </div>
-
-    <div class="unidad">
-        <h2>Unidad 3</h2>
-        <div class="botonera">
-            <a href="#" class="btn">Semana 1</a>
-            <a href="#" class="btn">Semana 2</a>
-            <a href="#" class="btn">Semana 3</a>
-            <a href="#" class="btn">Semana 4</a>
-        </div>
-    </div>
-
-    <div class="unidad">
-        <h2>Unidad 4</h2>
-        <div class="botonera">
-            <a href="#" class="btn">Semana 1</a>
-            <a href="#" class="btn">Semana 2</a>
-            <a href="#" class="btn">Semana 3</a>
-            <a href="#" class="btn">Semana 4</a>
-        </div>
-    </div>
-
-    <!-- Contenido de Unidad 2, Semana 2 -->
-    <section id="semana2">
-        <h2>Administración en la Nube (Unidad 2 - Semana 2)</h2>
-        <p>La administración en la nube implica controlar, supervisar y optimizar los recursos tecnológicos hospedados en plataformas de nube pública, privada o híbrida. Este tipo de administración asegura que los servicios estén disponibles, sean escalables, seguros y eficientes.</p>
+    <!-- Secciones Semanales -->
+    <section id="semana1">
+        <h2>Semana 1 - Introducción a la Computación en la Nube</h2>
+        <p>La computación en la nube es un modelo revolucionario que permite acceder a servicios de computación a través de Internet, lo que ofrece gran flexibilidad y escalabilidad en recursos informáticos. Esta tecnología ha transformado la manera en que las empresas gestionan sus infraestructuras tecnológicas.</p>
+        <p><strong>Conceptos clave:</strong></p>
         <ul>
-            <li>Gestión de recursos y almacenamiento</li>
-            <li>Monitoreo del rendimiento</li>
-            <li>Automatización de tareas</li>
-            <li>Escalabilidad y alta disponibilidad</li>
-            <li>Seguridad y acceso controlado</li>
+            <li><strong>Computación en la nube:</strong> Modelo de servicios informáticos a través de Internet.</li>
+            <li><strong>Infraestructura como servicio (IaaS):</strong> Provisión de recursos de computación como servicios escalables.</li>
+            <li><strong>Ventajas:</strong> Reducción de costos, acceso global, flexibilidad en el uso de recursos.</li>
         </ul>
-        <p>Las principales tecnologías utilizadas incluyen AWS, Azure, GCP, Ansible, Terraform, Kubernetes, Prometheus y Datadog.</p>
     </section>
 
-</main>
+    <section id="semana2">
+        <h2>Semana 2 - Modelos de Servicio en la Nube</h2>
+        <p>En la computación en la nube, existen diferentes modelos de servicio que permiten a las empresas elegir el que mejor se adapte a sus necesidades. Los principales modelos son IaaS, PaaS y SaaS, cada uno con características específicas.</p>
+        <p><strong>Modelos de servicios:</strong></p>
+        <ul>
+            <li><strong>IaaS (Infrastructure as a Service):</strong> Provisión de infraestructura informática como servidores, almacenamiento y redes.</li>
+            <li><strong>PaaS (Platform as a Service):</strong> Plataforma completa para desarrollar, ejecutar y gestionar aplicaciones sin preocuparse de la infraestructura.</li>
+            <li><strong>SaaS (Software as a Service):</strong> Aplicaciones alojadas en la nube accesibles a través de un navegador web.</li>
+        </ul>
+    </section>
 
-<footer>
-    <p>© 2025 Universidad Peruana Los Andes - Todos los derechos reservados.</p>
-</footer>
+    <section id="semana3">
+        <h2>Semana 3 - Proveedores de Nube</h2>
+        <p>Existen varios proveedores que ofrecen soluciones en la nube, siendo los más destacados Amazon Web Services (AWS), Microsoft Azure y Google Cloud Platform. Cada uno de estos proveedores ofrece una variedad de servicios con diferentes características y precios.</p>
+        <p><strong>Proveedores populares:</strong></p>
+        <ul>
+            <li><strong>AWS:</strong> Ofrece una amplia gama de servicios en la nube, siendo líder en el mercado de la infraestructura como servicio (IaaS).</li>
+            <li><strong>Microsoft Azure:</strong> Famoso por su integración con productos Microsoft y su flexibilidad para empresas que ya usan estas tecnologías.</li>
+            <li><strong>Google Cloud:</strong> Destacado por su enfoque en big data y análisis, aprovechando su infraestructura global.</li>
+        </ul>
+    </section>
+
+    <section id="semana4">
+        <h2>Semana 4 - Administración de Recursos en la Nube</h2>
+        <p>La administración de recursos en la nube se refiere a la gestión eficiente de la infraestructura y los servicios para garantizar un rendimiento óptimo y costos controlados. Este proceso incluye la gestión de servidores, almacenamiento y redes, todo en un entorno dinámico.</p>
+        <p><strong>Principales tareas:</strong></p>
+        <ul>
+            <li><strong>Escalabilidad:</strong> Capacidad de aumentar o reducir los recursos según la demanda.</li>
+            <li><strong>Elasticidad:</strong> Ajuste automático de los recursos disponibles según las necesidades.</li>
+            <li><strong>Monitoreo:</strong> Supervisión continua de los recursos para garantizar que se mantengan eficientes y seguros.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2025 Universidad Peruana Los Andes - Todos los derechos reservados.</p>
+    </footer>
 
 </body>
+<script>
+    function showUnidad(unidad) {
+        // Ocultar todas las secciones de las unidades
+        const unidades = document.querySelectorAll('.unidad');
+        unidades.forEach(u => u.style.display = 'none');
+
+        // Mostrar la unidad seleccionada
+        document.getElementById(`unidad${unidad}`).style.display = 'block';
+    }
+
+    function showSemana(semana) {
+        // Ocultar todas las secciones de las semanas
+        const semanas = document.querySelectorAll('section');
+        semanas.forEach(s => s.style.display = 'none');
+
+        // Mostrar la semana seleccionada
+        document.getElementById(`semana${semana}`).style.display = 'block';
+    }
+</script>
 </html>
+
