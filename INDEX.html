@@ -72,28 +72,21 @@
     </div>
   </div>
 
-  <div id="unidad3" class="unidad">
-    <h2></h2>
+ <div id="unidad3" class="unidad">
+    <h2>Gobierno y servicios de TI</h2>
     <div class="botonera">
       <button class="btn" onclick="showSemana(9)">Semana 9</button>
       <button class="btn" onclick="showSemana(10)">Semana 10</button>
-    </div>
-    <h2></h2>
-    <div class="botonera">
       <button class="btn" onclick="showSemana(11)">Semana 11</button>
       <button class="btn" onclick="showSemana(12)">Semana 12</button>
     </div>
   </div>
-  </div>
 
   <div id="unidad4" class="unidad">
-    <h2></h2>
+    <h2>Desarrollo e implementación de SI</h2>
     <div class="botonera">
       <button class="btn" onclick="showSemana(13)">Semana 13</button>
       <button class="btn" onclick="showSemana(14)">Semana 14</button>
-    </div>
-    <h2></h2>
-    <div class="botonera">
       <button class="btn" onclick="showSemana(15)">Semana 15</button>
       <button class="btn" onclick="showSemana(16)">Semana 16</button>
     </div>
@@ -325,7 +318,7 @@
     <img src="" alt="Indicadores de rendimiento">
   </div>
   
- <section id="semana9">
+  <section id="semana9">
     <h2>Semana 9: Gobierno de TI y Gestión de procesos</h2>
     <div class="subtema">
       <p><strong>Gobierno de TI:</strong></p>
@@ -431,7 +424,8 @@
 
   function showSemana(n) {
     document.querySelectorAll('section').forEach(s => s.style.display = 'none');
-    document.getElementById('semana' + n).style.display = 'block';
+    const semana = document.getElementById('semana' + n);
+    if (semana) semana.style.display = 'block';
   }
 </script>
 
